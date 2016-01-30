@@ -21,3 +21,7 @@ PRODUCT_PACKAGES += \
     Launcher3 \
     LiveWallpapersPicker \
     PrebuiltExchange3Google
+
+# Busybox
+PRODUCT_PACKAGES += \
+    Busybox
