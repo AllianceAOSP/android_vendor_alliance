@@ -18,6 +18,7 @@ PRODUCT_PACKAGE_OVERLAYS += \
 
 # Main Required Packages
 PRODUCT_PACKAGES += \
+	AllianceControlAOSP \
 	Bummer \
     Camera3 \
     Gallery2 \
