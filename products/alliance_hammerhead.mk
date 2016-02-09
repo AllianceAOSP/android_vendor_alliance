@@ -1,4 +1,4 @@
-# Copyright (C) 2015 The Pure Nexus Project
+# Copyright (C) 2016 AllianceROM
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,21 +12,21 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Include Pure Nexus tablet configuration
-include vendor/nexus/configs/nexus_tablet.mk
+# Include Alliance telephony configuration
+include vendor/alliance/configs/alliance_phone.mk
 
-# Inherit AOSP device configuration for flounder
-$(call inherit-product, device/htc/flounder/aosp_flounder.mk)
+# Inherit AOSP device configuration for hammerhead
+$(call inherit-product, device/lge/hammerhead/full_hammerhead.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := nexus_flounder
+PRODUCT_NAME := alliance_hammerhead
 PRODUCT_BRAND := google
-PRODUCT_DEVICE := flounder
-PRODUCT_MODEL := Nexus 9
-PRODUCT_MANUFACTURER := htc
+PRODUCT_DEVICE := hammerhead
+PRODUCT_MODEL := Nexus 5
+PRODUCT_MANUFACTURER := LGE
 
 # Device Fingerprint
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME=volantis \
-    BUILD_FINGERPRINT=google/volantis/flounder:6.0.1/MMB29R/2482564:user/release-keys \
-    PRIVATE_BUILD_DESC="volantis-user 6.0.1 MMB29R 2482564 release-keys"
+    PRODUCT_NAME=hammerhead \
+    BUILD_FINGERPRINT=google/hammerhead/hammerhead:6.0.1/MMB29Q/2480792:user/release-keys \
+    PRIVATE_BUILD_DESC="hammerhead-user 6.0.1 MMB29Q 2480792 release-keys"

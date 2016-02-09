@@ -1,4 +1,4 @@
-# Copyright (C) 2015 The Pure Nexus Project
+# Copyright (C) 2016 AllianceROM
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,10 +14,38 @@
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
-    vendor/nexus/prebuilt/bin/backuptool.sh:install/bin/backuptool.sh \
-    vendor/nexus/prebuilt/bin/backuptool.functions:install/bin/backuptool.functions \
-    vendor/nexus/prebuilt/bin/50-base.sh:system/addon.d/50-base.sh \
+    vendor/alliance/prebuilt/bin/backuptool.sh:install/bin/backuptool.sh \
+    vendor/alliance/prebuilt/bin/backuptool.functions:install/bin/backuptool.functions \
+    vendor/alliance/prebuilt/bin/50-base.sh:system/addon.d/50-base.sh \
 
 # Security Enhanced Linux
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1
+
+# init.d support
+PRODUCT_COPY_FILES += \
+    vendor/alliance/prebuilt/bin/sysinit:system/bin/sysinit
+
+# userinit support
+PRODUCT_COPY_FILES += \
+    vendor/alliance/prebuilt/etc/init.d/90userinit:system/etc/init.d/90userinit
+
+# Alliance init
+PRODUCT_COPY_FILES += \
+    vendor/alliance/prebuilt/etc/init.alliance.rc:root/init.alliance.rc
+
+# exfat support
+WITH_EXFAT ?= true
+ifeq ($(WITH_EXFAT),true)
+TARGET_USES_EXFAT := true
+PRODUCT_PACKAGES += \
+    mount.exfat \
+    fsck.exfat \
+    mkfs.exfat
+endif
+
+# NTFS support
+PRODUCT_PACKAGES += \
+    mkfs.ntfs \
+    fsck.ntfs \
+    mount.ntfs \

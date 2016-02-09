@@ -1,4 +1,4 @@
-# Copyright (C) 2015 The Pure Nexus Project
+# Copyright (C) 2016 AllianceROM
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -24,17 +24,17 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.dataroaming=false
 
 # Proprietary latinime libs needed for Keyboard swyping
-ifneq ($(filter nexus_deb nexus_hammerhead nexus_flo nexus_shamu,$(TARGET_PRODUCT)),)
+ifneq ($(filter alliance_deb alliance_hammerhead alliance_flo alliance_shamu,$(TARGET_PRODUCT)),)
 PRODUCT_COPY_FILES += \
-    vendor/nexus/prebuilt/lib/libjni_latinime.so:system/lib/libjni_latinime.so
+    vendor/alliance/prebuilt/lib/libjni_latinime.so:system/lib/libjni_latinime.so
 else
 PRODUCT_COPY_FILES += \
-    vendor/nexus/prebuilt/lib64/libjni_latinime.so:system/lib64/libjni_latinime.so
+    vendor/alliance/prebuilt/lib64/libjni_latinime.so:system/lib64/libjni_latinime.so
 endif
 
 # Camera Effects for devices without a vendor partition
-ifneq ($(filter nexus_deb nexus_hammerhead nexus_flo nexus_shamu,$(TARGET_PRODUCT)),)
+ifneq ($(filter alliance_deb alliance_hammerhead alliance_flo alliance_shamu,$(TARGET_PRODUCT)),)
 PRODUCT_COPY_FILES +=  \
-    vendor/nexus/prebuilt/media/LMspeed_508.emd:system/vendor/media/LMspeed_508.emd \
-    vendor/nexus/prebuilt/media/PFFprec_600.emd:system/vendor/media/PFFprec_600.emd
+    vendor/alliance/prebuilt/media/LMspeed_508.emd:system/vendor/media/LMspeed_508.emd \
+    vendor/alliance/prebuilt/media/PFFprec_600.emd:system/vendor/media/PFFprec_600.emd
 endif

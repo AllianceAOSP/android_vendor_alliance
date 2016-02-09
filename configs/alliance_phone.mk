@@ -1,4 +1,4 @@
-# Copyright (C) 2015 The Pure Nexus Project
+# Copyright (C) 2016 AllianceROM
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,21 +12,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Include overlays
-PRODUCT_PACKAGE_OVERLAYS += \
-    vendor/nexus/overlay/common
+include vendor/alliance/configs/aosp_fixes.mk
+include vendor/alliance/configs/bootanimation.mk
+include vendor/alliance/configs/alliance_main.mk
+include vendor/alliance/configs/system_additions.mk
 
-# Main Required Packages
+# Telephony packages
 PRODUCT_PACKAGES += \
-    Launcher3 \
-    LiveWallpapersPicker \
-    PrebuiltExchange3Google
+    Stk \
+    CellBroadcastReceiver
 
-# Busybox
-PRODUCT_PACKAGES += \
-    Busybox
+# Allow tethering without provisioning app
+PRODUCT_PROPERTY_OVERRIDES += \
+    net.tethering.noprovisioning=true
 
-# SuperSU FTW
-PRODUCT_COPY_FILES += \
-    vendor/nexus/prebuilt/supersu/UPDATE-SuperSU.zip:system/addon.d/UPDATE-SuperSU.zip \
-    vendor/nexus/prebuilt/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon

@@ -1,4 +1,4 @@
-# Copyright (C) 2015 The Pure Nexus Project
+# Copyright (C) 2016 AllianceROM
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,14 +12,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Include Pure Nexus telephony configuration
-include vendor/nexus/configs/nexus_phone.mk
+# Include Alliance telephony configuration
+include vendor/alliance/configs/alliance_phone.mk
 
 # Inherit AOSP device configuration for shamu.
 $(call inherit-product, device/moto/shamu/aosp_shamu.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := nexus_shamu
+PRODUCT_NAME := alliance_shamu
 PRODUCT_BRAND := google
 PRODUCT_DEVICE := shamu
 PRODUCT_MODEL := Nexus 6

@@ -1,4 +1,4 @@
-# Copyright (C) 2015 The Pure Nexus Project
+# Copyright (C) 2016 AllianceROM
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,11 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-include vendor/nexus/configs/aosp_fixes.mk
-include vendor/nexus/configs/bootanimation.mk
-include vendor/nexus/configs/nexus_main.mk
-include vendor/nexus/configs/system_additions.mk
+# Alliance version
+export ALLIANCE_VERSION := $(PLATFORM_VERSION)-$(shell date +%Y%m%d)
 
-# Enable SIP+VoIP
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.alliance.version=$(ALLIANCE_VERSION)
+

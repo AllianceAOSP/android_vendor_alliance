@@ -1,4 +1,4 @@
-# Copyright (C) 2015 The Pure Nexus Project
+# Copyright (C) 2016 AllianceROM
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,21 +12,21 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Include Pure Nexus tablet configuration
-include vendor/nexus/configs/nexus_tablet.mk
+# Include Alliance tablet configuration
+include vendor/alliance/configs/alliance_tablet.mk
 
 # Inherit AOSP device configuration for flo
-$(call inherit-product, device/asus/deb/aosp_deb.mk)
+$(call inherit-product, device/asus/flo/full_flo.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := nexus_deb
+PRODUCT_NAME := alliance_flo
 PRODUCT_BRAND := google
-PRODUCT_DEVICE := deb
+PRODUCT_DEVICE := flo
 PRODUCT_MODEL := Nexus 7
 PRODUCT_MANUFACTURER := asus
 
 # Device Fingerprint
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME=razorg \
-    BUILD_FINGERPRINT=google/razorg/deb:6.0.1/MMB29Q/2480792:user/release-keys \
-    PRIVATE_BUILD_DESC="razorg-user 6.0.1 MMB29Q 2480792 release-keys"
+    PRODUCT_NAME=razor \
+    BUILD_FINGERPRINT=google/razor/flo:6.0.1/MMB29Q/2480792:user/release-keys \
+    PRIVATE_BUILD_DESC="razor-user 6.0.1 MMB29Q 2480792 release-keys"

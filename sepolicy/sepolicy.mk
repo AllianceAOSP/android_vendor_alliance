@@ -4,4 +4,4 @@
 #
 
 BOARD_SEPOLICY_DIRS += \
-    vendor/nexus/sepolicy
+    vendor/alliance/sepolicy
