@@ -28,6 +28,7 @@ PRODUCT_PACKAGES += \
     PermissionApp \
     PermissionApp2 \
     PrebuiltExchange3Google \
+    Screencast \
     SoundRecorder \
     Terminal \
     WallpaperPicker
