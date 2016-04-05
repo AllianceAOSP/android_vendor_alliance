@@ -33,3 +33,6 @@ endif
 ifeq (alliance_shamu,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/alliance_shamu.mk
 endif
+ifeq (alliance_hlte,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/alliance_hlte.mk
+endif
