@@ -1,4 +1,5 @@
 add_lunch_combo alliance_angler-user
+add_lunch_combo alliance_angler-userdebug
 add_lunch_combo alliance_bullhead-user
 add_lunch_combo alliance_deb-user
 add_lunch_combo alliance_flo-user
