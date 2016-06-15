@@ -1,8 +1,14 @@
 add_lunch_combo alliance_angler-user
 add_lunch_combo alliance_angler-userdebug
 add_lunch_combo alliance_bullhead-user
+add_lunch_combo alliance_bullhead-userdebug
 add_lunch_combo alliance_deb-user
+add_lunch_combo alliance_deb-userdebug
 add_lunch_combo alliance_flo-user
+add_lunch_combo alliance_flo-userdebug
 add_lunch_combo alliance_flounder-user
+add_lunch_combo alliance_flounder-userdebug
 add_lunch_combo alliance_hammerhead-user
+add_lunch_combo alliance_hammerhead-userdebug
 add_lunch_combo alliance_shamu-user
+add_lunch_combo alliance_shamu-userdebug
