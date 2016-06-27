@@ -16,6 +16,7 @@ include vendor/alliance/configs/aosp_fixes.mk
 include vendor/alliance/configs/bootanimation.mk
 include vendor/alliance/configs/alliance_main.mk
 include vendor/alliance/configs/system_additions.mk
+include vendor/alliance/configs/version.mk
 
 # Telephony packages
 PRODUCT_PACKAGES += \
