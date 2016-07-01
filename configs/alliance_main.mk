@@ -12,6 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+export AC_SRC := false
+
 # Include overlays
 PRODUCT_PACKAGE_OVERLAYS += \
     vendor/alliance/overlay/common
@@ -32,7 +34,13 @@ PRODUCT_PACKAGES += \
     SoundRecorder \
     Terminal \
     WallpaperPicker
-   
+
+$(call inherit-product-if-exists, packages/apps/AllianceControlAOSP/BuildACSource.mk)
+
+ ifneq ($(AC_SRC),true)
+ PRODUCT_PACKAGES += \
+ 	AllianceControlAOSPPrebuilt
+ endif
 
 # Busybox
 PRODUCT_PACKAGES += \
